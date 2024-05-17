@@ -1,0 +1,3 @@
+create new module - nest g module users(name)
+create new controller - nest g controller users(name)
+create new provider(service) - nest g service users(name)
