@@ -13,27 +13,32 @@ import {
 export class UsersController {
   //routers goes from top to bottom
 
-  @Get() // /users or users?role=admin
+  // /users or users?role=admin
+  @Get()
   findAll(@Query('role') role?: 'admin' | 'user') {
     return [{ role }];
   }
 
-  @Get(':id') // /users/:id
+  // /users/:id
+  @Get(':id')
   findOne(@Param('id') id: string) {
     return { id };
   }
 
-  @Post() // /users
+  // /users
+  @Post()
   create(@Body() user: { name: string }) {
     return user;
   }
 
-  @Patch(':id') // /users/:id
+  // /users/:id
+  @Patch(':id')
   update(@Param('id') id: string, @Body() user: { name: string }) {
     return { id, ...user };
   }
 
-  @Delete(':id') // /users/:id
+  // /users/:id
+  @Delete(':id')
   delete(@Param('id') id: string) {
     return { id };
   }
