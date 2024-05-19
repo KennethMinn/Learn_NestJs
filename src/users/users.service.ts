@@ -54,7 +54,7 @@ export class UsersService {
 
   update(
     id: number,
-    updatedUser: { name: string; email: string; role: 'admin' | 'user' },
+    updatedUser: { name?: string; email?: string; role?: 'admin' | 'user' },
   ) {
     this.users = this.users.map((user) => {
       if (user.id === id) {
